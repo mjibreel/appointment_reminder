@@ -14,7 +14,9 @@ A comprehensive Flutter application for managing appointments, medication remind
 
 ## Screenshots
 
-[Add screenshots here after running the app]
+![Home Screen](home.png)
+
+*The app features a clean, modern interface with quick access to health tracking, checkups, and medication management.*
 
 ## Tech Stack
 
