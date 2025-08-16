@@ -1,0 +1,35 @@
+// Define Kotlin version as a global property
+buildscript {
+    ext.kotlin_version = '1.9.0' // Ensure compatibility with AGP 8.2.1 and Java 21
+
+    repositories {
+        google() // Google's Maven repository
+        mavenCentral() // Central Maven repository
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1' // Upgrade AGP to 8.2.1 for Java 21 compatibility
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin plugin
+        classpath 'com.google.gms:google-services:4.4.0' // Firebase Google Services plugin
+    }
+}
+
+// Configure all projects in the build
+allprojects {
+    repositories {
+        google() // Google's Maven repository
+        mavenCentral() // Central Maven repository
+    }
+}
+
+// Customize build directories for better organization
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app') // Ensure the ':app' module is evaluated first
+}
+
+// Define a clean task to delete build artifacts
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
