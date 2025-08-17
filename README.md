@@ -88,11 +88,14 @@ lib/
 - Users can manage permissions in device settings
 
 
+
 ## 👨‍💻 Author
 
-Mohamed Hassan Jibril
-- GitHub: [](https://github.com/mjibreel)
-- LinkedIn: [](www.linkedin.com/in/moh-jibril)
+**Mohamed Hassan Jibril**
+- **GitHub:** [mjibreel](https://github.com/mjibreel)
+- **LinkedIn:** [moh-jibril](https://www.linkedin.com/in/moh-jibril)
+
+
 
 
 
